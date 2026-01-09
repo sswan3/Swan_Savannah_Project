@@ -54,6 +54,10 @@ namespace Swan_Project
             double input2 = double.Parse(userinput2);
 
             Calculate calc = new Calculate(input, input2);
+            if (input2 == 0)
+            {
+                MessageBox.Show("cannot divide by 0");
+            }
             double divide = calc.divide(input, input2);
             MessageBox.Show(divide.ToString());
         }
